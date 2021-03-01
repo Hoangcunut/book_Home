@@ -1,6 +1,6 @@
 
 <!-- SEARCH SECTION -->
-
+{{-- <img src ="/img/Bliss.jpg" alt="anhtest"> --}}
 <section class="indigo darken-2 white-text center">
     <div class="container">
         <div class="row m-b-0">
@@ -58,4 +58,6 @@
             </div>
         </div>
     </div>
+    {{-- <body style="background: url(/img/Bliss.jpg)"> --}}
 </section>
+

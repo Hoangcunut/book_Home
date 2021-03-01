@@ -2,15 +2,22 @@
     <div class="container">
         <div class="row">
             <div class="col m4 s12">
-                <h5 class="white-text uppercase">About Us</h5>
+                <h6 class="white-text uppercase">THÔNG TIN VỀ CHÚNG TÔI</h6>
                 @if(isset($footersettings[0]) && $footersettings[0]['aboutus'])
                     <p class="grey-text text-lighten-4">{{ $footersettings[0]['aboutus'] }}</p>
                 @else
-                    <p class="grey-text text-lighten-4">Real estate company description goes here.</p>
+                    <p class="grey-text text-lighten-4">Cơ quan chủ quản:abcdfeabcdfe<br />
+                    
+                        Địa chỉ: <br>
+                        - Văn phòng Hà Nội: abcabc<br/>
+                        - Văn phòng TP.HCM:  xyzxyz<br />
+                        Hotline: 19006933 <br /> 
+                        Email:  hotro@XYZXYZ.vn <br>
+                        Chịu trách nhiệm: Phạm Trung Ruồi</p>
                 @endif
             </div>
             <div class="col m6 s12">
-                <h5 class="white-text uppercase">Recent Properties</h5>
+                <h6 class="white-text uppercase">THÔNG TIN ĐĂNG GẦN ĐÂY</h6>
                 <ul class="collection border0">
 
                     @foreach($footerproperties as $property)
@@ -20,14 +27,14 @@
                             <h5 class="font-18 m-b-0 m-t-5">
                                 <a href="{{ route('property.show',$property->slug) }}" class="white-text">{{ str_limit($property->title,40) }}</a>
                             </h5>
-                            <p class="m-t-0 m-b-5 grey-text text-lighten-1">Bedroom: {{ $property->bedroom }} Bathroom: {{ $property->bathroom }} </p>
+                            <p class="m-t-0 m-b-5 grey-text text-lighten-1">PHÒNG NGỦ : {{ $property->bedroom }} PHÒNG TẮM: {{ $property->bathroom }} </p>
                         </div>
                     </li>
                     @endforeach
 
                 </ul>
             </div>
-            <div class="col m2 s12">
+            {{-- <div class="col m2 s12">
                 <h5 class="white-text uppercase">Menu</h5>
                 <ul>
                     <li class="uppercase {{ Request::is('property*') ? 'underline' : '' }}">
@@ -50,7 +57,7 @@
                         <a href="{{ route('contact') }}" class="grey-text text-lighten-3">Contact</a>
                     </li>
                 </ul>
-            </div>
+            </div> --}}
         </div>
     </div>
     <div class="footer-copyright">
@@ -58,7 +65,7 @@
             @if(isset($footersettings[0]) && $footersettings[0]['footer'])
                 {{ $footersettings[0]['footer'] }}
             @else
-                © 2018 Developer Canvas Studio.
+                © 2021 BatDongSan
             @endif
 
             @if(isset($footersettings[0]) && $footersettings[0]['facebook'])

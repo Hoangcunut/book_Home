@@ -17,7 +17,7 @@
 
                 <div class="col s12 m9">
 
-                    <h4 class="agent-title">DASHBOARD</h4>
+                    <h4 class="agent-title">BẢNG QUẢN LÝ</h4>
                     
                     <div class="agent-content">
 

@@ -7,9 +7,13 @@
                     @if(isset($navbarsettings[0]) && $navbarsettings[0]['name'])
                         {{ $navbarsettings[0]['name'] }}
                     @else
-                        Real State
+                    {{-- <font><marquee direction="left" style="background:rgb(0, 132, 255)">HOUSE SHARD</marquee width="200"></font> --}}
+                    <marquee onmouseover="this.stop()" onmouseout="this.start()" scrollamount="2">HOUSE DOPHIN</marquee>
+                    {{-- <marquee behavior="alternate"><marquee width="150">  
+                        BẤT ĐỘNG SẢN DOPHIN</marquee></marquee> --}}
+                      
                     @endif
-                    <i class="material-icons left">location_city</i>
+                   
                 </a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger">
                     <i class="material-icons">menu</i>
@@ -17,27 +21,27 @@
                 
                 <ul class="right hide-on-med-and-down">
                     <li class="{{ Request::is('/') ? 'active' : '' }}">
-                        <a href="{{ route('home') }}">Home</a>
+                        <a href="{{ route('home') }}">Trang chủ</a>
                     </li>
 
                     <li class="{{ Request::is('property*') ? 'active' : '' }}">
-                        <a href="{{ route('property') }}">Properties</a>
+                        <a href="{{ route('property') }}">Nhà đất cho thuê</a>
                     </li>
 
                     <li class="{{ Request::is('agents*') ? 'active' : '' }}">
-                        <a href="{{ route('agents') }}">Agents</a>
+                        <a href="{{ route('agents') }}">Dự án </a>
                     </li>
 
                     <li class="{{ Request::is('gallery') ? 'active' : '' }}">
-                        <a href="{{ route('gallery') }}">Gallery</a>
+                        <a href="{{ route('gallery') }}">Tin tức</a>
                     </li>
 
                     <li class="{{ Request::is('blog*') ? 'active' : '' }}">
-                        <a href="{{ route('blog') }}">Blog</a>
+                        <a href="{{ route('blog') }}">Danh bạ</a>
                     </li>
 
                     <li class="{{ Request::is('contact') ? 'active' : '' }}">
-                        <a href="{{ route('contact') }}">Contact</a>
+                        <a href="{{ route('contact') }}">Liên hệ </a>
                     </li>
 
                     @guest
@@ -88,7 +92,7 @@
     
     <ul class="sidenav" id="mobile-demo">
         <li class="{{ Request::is('/') ? 'active' : '' }}">
-            <a href="{{ route('home') }}">Home</a>
+            <a href="{{ route('home') }}">Trang chủ</a>
         </li>
 
         <li class="{{ Request::is('property*') ? 'active' : '' }}">
@@ -103,8 +107,8 @@
             <a href="{{ route('gallery') }}">Gallery</a>
         </li>
 
-        <li class="{{ Request::is('blog*') ? 'active' : '' }}">
-            <a href="{{ route('blog') }}">Blog</a>
+        {{-- <li class="{{ Request::is('blog*') ? 'active' : '' }}">
+            <a href="{{ route('blog') }}">Blog</a> --}}
         </li>
 
         <li class="{{ Request::is('contact') ? 'active' : '' }}">
